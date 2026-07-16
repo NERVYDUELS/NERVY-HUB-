@@ -32,8 +32,8 @@ local LP = Players.LocalPlayer
 if not LP then LP = Players.PlayerAdded:Wait() end
 
 
-if _G.GreenDuelsV2_Running then return end
-_G.GreenDuelsV2_Running = true
+if _N.NƐRVYDUƐLSV1_Running then return end
+_N.NƐRVYDUƐLSV1_Running = true
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
