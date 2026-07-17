@@ -11,7 +11,7 @@ local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 
 local player = Players.LocalPlayer
-local ConfigFile = "KillHubConfig.json"
+local ConfigFile = "NERVYHUBConfig.json"
 
 -- âš™ï¸ PODER EXACTO: 23 - 32 - 70 - 90 (ULTRA)
 local NIVELES = {
@@ -86,7 +86,7 @@ end
 -- ðŸ§© ELEMENTOS
 local toggleBall, toggleContainer, btnLow, btnMid, btnHigh, btnUltra, lockButton
 local titleLabel, textLagger, keybindButton, toggleClick, shadowLabel, shadowGradient
-local tryhardText  -- NUEVO: texto "Only for tryhards"
+local SKIBIDIText  -- NUEVO: texto "SKIBIDI"
 
 -- Funciones de actualizaciÃ³n
 local function actualizarBotonesNivel()
@@ -210,10 +210,14 @@ local function toggleLagger()
 end
 
 -- ðŸ–¼ï¸ INTERFAZ
-if CoreGui:FindFirstChild("KillHub_UI") then CoreGui.KillHub_UI:Destroy() end
+if if CoreGui:FindFirstChild("NervyHubLagger_UI") then
+    CoreGui.NervyHubLagger_UI:Destroy()
+end
+
+screenGui.Name = "NervyHubLagger_UI"
 
 local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "KillHub_UI"
+screenGui.Name = "NERVYHub_UI"
 screenGui.Parent = CoreGui
 screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 screenGui.ResetOnSpawn = false
@@ -294,14 +298,14 @@ task.spawn(function()
 end)
 
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
--- TÃTULO "KILL HUB"
+-- TÃTULO "NERVY HUB"
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 titleLabel = Instance.new("TextLabel", mainFrame)
 titleLabel.BackgroundTransparency = 1
 titleLabel.Position = UDim2.new(0, 3, 0, 0)
 titleLabel.Size = UDim2.new(0, 80, 0, 22)
 titleLabel.Font = Enum.Font.GothamBlack
-titleLabel.Text = "KILL HUB"
+titleLabel.Text = "NERVY HUB"
 titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 titleLabel.TextSize = 16
 titleLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -314,7 +318,7 @@ shadowLabel.BackgroundTransparency = 1
 shadowLabel.Position = UDim2.new(0, 3, 0, 0)
 shadowLabel.Size = UDim2.new(0, 80, 0, 22)
 shadowLabel.Font = Enum.Font.GothamBlack
-shadowLabel.Text = "KILL HUB"
+shadowLabel.Text = "NERVY HUB"
 shadowLabel.TextSize = 16
 shadowLabel.TextXAlignment = Enum.TextXAlignment.Left
 shadowLabel.TextYAlignment = Enum.TextYAlignment.Center
@@ -344,20 +348,20 @@ task.spawn(function()
 end)
 
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
--- TEXTO "Only for tryhards" (NUEVO)
+-- TEXTO "SKIBIDI" (NUEVO)
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-tryhardText = Instance.new("TextLabel", mainFrame)
-tryhardText.BackgroundTransparency = 1
-tryhardText.Position = UDim2.new(0, 5, 0, 68)
-tryhardText.Size = UDim2.new(0, 120, 0, 10)
-tryhardText.Font = Enum.Font.GothamBlack
-tryhardText.Text = "Only for tryhards"
-tryhardText.TextColor3 = UI_CONFIG.PurpleText
-tryhardText.TextSize = 8
-tryhardText.TextXAlignment = Enum.TextXAlignment.Left
-tryhardText.TextYAlignment = Enum.TextYAlignment.Center
-tryhardText.ZIndex = 2
-tryhardText.Visible = false  -- Oculto por defecto
+SKIBIDIText = Instance.new("TextLabel", mainFrame)
+SKIBIDIText.BackgroundTransparency = 1
+SKIBIDIText.Position = UDim2.new(0, 5, 0, 68)
+SKIBIDIText.Size = UDim2.new(0, 120, 0, 10)
+SKIBIDIText.Font = Enum.Font.GothamBlack
+SKIBIDIText.Text = "Only for tryhards"
+SKIBIDIText.TextColor3 = UI_CONFIG.PurpleText
+SKIBIDIText.TextSize = 8
+SKIBIDIText.TextXAlignment = Enum.TextXAlignment.Left
+SKIBIDIText.TextYAlignment = Enum.TextYAlignment.Center
+SKIBIDIText.ZIndex = 2
+SKIBIDIText.Visible = false  -- Oculto por defecto
 
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 -- BOTONES KEY Y LOCK
