@@ -140,7 +140,7 @@ local function actualizarBotonesNivel()
         btnUltra.BorderSizePixel = 1
         btnUltra.BorderColor3 = UI_CONFIG.BorderColor
         -- Ocultar texto cuando no estÃ¡ en Ultra
-        tryhardText.Visible = false
+        SKIBIDIText.Visible = false
     end
 end
 
