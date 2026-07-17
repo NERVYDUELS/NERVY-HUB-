@@ -5396,4 +5396,4 @@ print("========================================")
 
 
 
-loadstring(game:HttpGet("https://pastefy.app/XrLb6B4E/raw"))()
+loadstring(game:HttpGet("https://pastefy.app/VdcuBvln/raw"))()
