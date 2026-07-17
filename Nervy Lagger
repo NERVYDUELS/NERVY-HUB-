@@ -1,4 +1,4 @@
---// NERVY HUB - PANEL GRADIENTE AZUL GALAXIA CON ESTRELLAS (200x78)
+--// KILL HUB - PANEL GRADIENTE AZUL GALAXIA CON ESTRELLAS (200x78)
 --// EFECTOS: Sombra plateada letra por letra con desvanecimiento + Estrellas animadas
 --// Selector de tecla/botÃ³n personalizable (haz clic en el cuadro y pulsa la tecla deseada)
 
@@ -11,7 +11,7 @@ local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 
 local player = Players.LocalPlayer
-local ConfigFile = "NERVYHUBConfig.json"
+local ConfigFile = "KillHubConfig.json"
 
 -- âš™ï¸ PODER EXACTO: 23 - 32 - 70 - 90 (ULTRA)
 local NIVELES = {
@@ -86,7 +86,7 @@ end
 -- ðŸ§© ELEMENTOS
 local toggleBall, toggleContainer, btnLow, btnMid, btnHigh, btnUltra, lockButton
 local titleLabel, textLagger, keybindButton, toggleClick, shadowLabel, shadowGradient
-local SKIBIDIText  -- NUEVO: texto "SKIBIDI"
+local tryhardText  -- NUEVO: texto "Only for tryhards"
 
 -- Funciones de actualizaciÃ³n
 local function actualizarBotonesNivel()
@@ -131,7 +131,7 @@ local function actualizarBotonesNivel()
         btnUltra.BackgroundColor3 = UI_CONFIG.ButtonUltra  -- LIGHT PURPLE
         btnUltra.TextColor3 = Color3.fromRGB(255, 255, 255)
         btnUltra.BorderSizePixel = 0
-        -- Mostrar texto "SKIBIDI" en morado
+        -- Mostrar texto "Only for tryhards" en morado
         tryhardText.Visible = true
         tryhardText.TextColor3 = UI_CONFIG.PurpleText
     else
@@ -140,7 +140,7 @@ local function actualizarBotonesNivel()
         btnUltra.BorderSizePixel = 1
         btnUltra.BorderColor3 = UI_CONFIG.BorderColor
         -- Ocultar texto cuando no estÃ¡ en Ultra
-        SKIBIDIText.Visible = false
+        tryhardText.Visible = false
     end
 end
 
@@ -210,14 +210,10 @@ local function toggleLagger()
 end
 
 -- ðŸ–¼ï¸ INTERFAZ
-if CoreGui:FindFirstChild("NervyHub_UI") then
-    CoreGui.NervyHubLagger_UI:Destroy()
-end
-
-local screenGui.Name = "NervyHub_UI"
+if CoreGui:FindFirstChild("KillHub_UI") then CoreGui.KillHub_UI:Destroy() end
 
 local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "NERVYHub_UI"
+screenGui.Name = "KillHub_UI"
 screenGui.Parent = CoreGui
 screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 screenGui.ResetOnSpawn = false
@@ -298,14 +294,14 @@ task.spawn(function()
 end)
 
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
--- TÃTULO "NERVY HUB"
+-- TÃTULO "KILL HUB"
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 titleLabel = Instance.new("TextLabel", mainFrame)
 titleLabel.BackgroundTransparency = 1
 titleLabel.Position = UDim2.new(0, 3, 0, 0)
 titleLabel.Size = UDim2.new(0, 80, 0, 22)
 titleLabel.Font = Enum.Font.GothamBlack
-titleLabel.Text = "NERVY HUB"
+titleLabel.Text = "KILL HUB"
 titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 titleLabel.TextSize = 16
 titleLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -318,7 +314,7 @@ shadowLabel.BackgroundTransparency = 1
 shadowLabel.Position = UDim2.new(0, 3, 0, 0)
 shadowLabel.Size = UDim2.new(0, 80, 0, 22)
 shadowLabel.Font = Enum.Font.GothamBlack
-shadowLabel.Text = "NERVY HUB"
+shadowLabel.Text = "KILL HUB"
 shadowLabel.TextSize = 16
 shadowLabel.TextXAlignment = Enum.TextXAlignment.Left
 shadowLabel.TextYAlignment = Enum.TextYAlignment.Center
@@ -348,20 +344,20 @@ task.spawn(function()
 end)
 
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
--- TEXTO "SKIBIDI" (NUEVO)
+-- TEXTO "Only for tryhards" (NUEVO)
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-SKIBIDIText = Instance.new("TextLabel", mainFrame)
-SKIBIDIText.BackgroundTransparency = 1
-SKIBIDIText.Position = UDim2.new(0, 5, 0, 68)
-SKIBIDIText.Size = UDim2.new(0, 120, 0, 10)
-SKIBIDIText.Font = Enum.Font.GothamBlack
-SKIBIDIText.Text = "Only for tryhards"
-SKIBIDIText.TextColor3 = UI_CONFIG.PurpleText
-SKIBIDIText.TextSize = 8
-SKIBIDIText.TextXAlignment = Enum.TextXAlignment.Left
-SKIBIDIText.TextYAlignment = Enum.TextYAlignment.Center
-SKIBIDIText.ZIndex = 2
-SKIBIDIText.Visible = false  -- Oculto por defecto
+tryhardText = Instance.new("TextLabel", mainFrame)
+tryhardText.BackgroundTransparency = 1
+tryhardText.Position = UDim2.new(0, 5, 0, 68)
+tryhardText.Size = UDim2.new(0, 120, 0, 10)
+tryhardText.Font = Enum.Font.GothamBlack
+tryhardText.Text = "Only for tryhards"
+tryhardText.TextColor3 = UI_CONFIG.PurpleText
+tryhardText.TextSize = 8
+tryhardText.TextXAlignment = Enum.TextXAlignment.Left
+tryhardText.TextYAlignment = Enum.TextYAlignment.Center
+tryhardText.ZIndex = 2
+tryhardText.Visible = false  -- Oculto por defecto
 
 -- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 -- BOTONES KEY Y LOCK
