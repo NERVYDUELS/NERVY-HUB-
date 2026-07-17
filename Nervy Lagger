@@ -131,7 +131,7 @@ local function actualizarBotonesNivel()
         btnUltra.BackgroundColor3 = UI_CONFIG.ButtonUltra  -- LIGHT PURPLE
         btnUltra.TextColor3 = Color3.fromRGB(255, 255, 255)
         btnUltra.BorderSizePixel = 0
-        -- Mostrar texto "Only for tryhards" en morado
+        -- Mostrar texto "SKIBIDI" en morado
         tryhardText.Visible = true
         tryhardText.TextColor3 = UI_CONFIG.PurpleText
     else
@@ -210,11 +210,11 @@ local function toggleLagger()
 end
 
 -- ðŸ–¼ï¸ INTERFAZ
-if if CoreGui:FindFirstChild("NervyHubLagger_UI") then
+if CoreGui:FindFirstChild("NervyHub_UI") then
     CoreGui.NervyHubLagger_UI:Destroy()
 end
 
-screenGui.Name = "NervyHubLagger_UI"
+local screenGui.Name = "NervyHub_UI"
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Name = "NERVYHub_UI"
